@@ -1,0 +1,369 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <script src="https://kit.fontawesome.com/4885b8d773.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/libs.min.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="top_nav">
+        <div class="container">
+            <div class="left_nav">
+                <!-- <span><i class="fas fa-map-marker-alt"></i></span>-->
+                </div> 
+            <div class="right_nav"><span><i class="fas fa-paper-plane"></i>guruitcompany@gmail.com</span><span><i class="fas fa-mobile-alt" type='tel'></i>+996-990-930-555</span></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="menu d-flex justify-content-between align-items-center"><a class="logo" href="{% url 'home' %}"><img src="{% static 'img/icons/logo_vio.svg' %}">GuruIT</a>
+            <div class="menu__icon"><span></span><span></span><span></span><span></span></div>
+            <div class="menu__links">
+                <ul>
+                    <li class="active"><a class="menu__links-item" href="{% url 'home' %}">Главная</a></li>
+                    <li><a class="menu__links-item" href="portfolio.html">Портфолио</a></li>
+                    <li class="down_nav"><a class="menu__links-item" href="#">Блог</a>
+                        <ul>
+                            <li><a href="./blog/two_cols.html">Two Column</a></li>
+                            <li><a href="./blog/single_post_image.html">Single Post Image</a></li>
+                            <li><a href="./blog/single_post_video.html">Single Post Video</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="menu__links-item" href="about.html">О нас</a></li>
+                    <li><a class="menu__links-item" href="contacts.html">Контакты</a></li>
+                    <div class="button small line"><a href="">Связаться с нами</a></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <header class="slider_head"><span class="element_two"><img src="{% static 'img/cub_two.png' %}" alt=""></span><span class="element_three"><img src="{% static 'img/cub_three.png' %}" alt=""></span><span class="element_four"><img src="{% static 'img/cub_four.png' %}" alt=""></span><span class="element_five"><img src="{% static 'img/block_five.png' %}" alt=""></span>
+        <span
+            class="element_six"><img src="{% static 'img/cub_six.png' %}" alt=""></span><span class="element_seven"><img src="{% static 'img/cub_seven.png' %}" alt=""></span><span class="element_eight"><img src="{% static 'img/cub_eight.png' %}" alt=""></span><span class="element_nine"><img src="{% static 'img/cub_four.png' %}" alt=""></span>
+            <div class="icon">
+                <div class="row flex-column align-items-center justify-content-center h-100"><a href=""><i class="fa fa-phone" aria-hidden="true"></i></a><a href=""><i class="fab fa-instagram"></i></a><a href=""><i class="class fab fa-whatsapp"></i></a><a href=""><i class="fab fa-facebook-f"></i></a></div>
+            </div>
+            <div class="container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper head_slider">
+                        <div class="swiper-slide">
+                            <div class="tit_img"><img src="{% static 'img/image_header_l.png' %}" src-plh="https://via.placeholder.com/500x500"></div>
+                            <div class="title">
+                                <div class="box">
+                                    <h1>Кретативная студия разработки</h1>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="button"><a href="">Что мы делаем?
+                                </a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tit_img"><img src="{% static 'img/slide02_l.png' %}" src-plh="https://via.placeholder.com/500x500"></div>
+                            <div class="title">
+                                <div class="box">
+                                    <h1>Welcome To Website</h1>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="button"><a href="">What we do</a></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tit_img"><img src="{% static 'img/slide03_l.png' %}" src-plh="https://via.placeholder.com/500x500"></div>
+                            <div class="title">
+                                <div class="box">
+                                    <h1>Hard Work is Sucess</h1>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="button"><a href="">What we do</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+    </header>
+    <section class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="0">
+                    <div class="numb"><span><img src="{% static 'img/icons/icon_01.svg' %}"></span>
+                        <h3>Bright project</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="numb"><span><img src="{% static 'img/icons/icon_02.svg' %}"></span>
+                        <h3>Project discussion</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="numb"><span><img src="{% static 'img/icons/icon_03.svg' %}"></span>
+                        <h3>Signing a contract</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="welcome_b">
+        <div class="welcome row">
+            <div class="img_b col-lg-6 p-0"><img src="{% static 'img/img02_l.jpg' %}" src-plh="https://via.placeholder.com/1920x1080"></div>
+            <div class="bg col-lg-6">
+                <div class="cont_inf">
+                    <h2>Welcome To Website</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Iaculis at erat pellentesque adipiscing.</p>
+                    <div class="button"><a href="">What we do</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="products"><span class="element_ten"><img src="{% static 'img/icons/cub_ten.svg' %}" alt=""></span><span class="element_eleven"><img src="{% static 'img/icons/cub_eleven.svg' %}" alt=""></span><span class="element_twelve"><img src="{% static 'img/icons/cub_twelve.svg' %}" alt=""></span>
+        <div class="container">
+            <div class="row">
+                <div class="title_b col-sm-12 col-12">
+                    <h2>What We Do</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="row">
+                    <div class="pr col-lg-4 col-md-8 col-12" data-aos="fade-up" data-aos-duration="0">
+                        <div class="product_bl"><img src="{% static 'img/block_one_l.png' %}" alt="">
+                            <div class="product_cont">
+                                <h3>Social Media Ads</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p><span>999<sup><small>$</small></sup><i>/ mo</i></span>
+                                <div class="button"><a href="">Start</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr col-lg-4 col-md-8 col-12" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="product_bl"><img src="{% static 'img/block_two_l.png' %}" alt="">
+                            <div class="product_cont">
+                                <h3>Photo Production</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p><span>100<sup><small>$</small></sup><i>/ mo</i></span>
+                                <div class="button"><a href="">Start</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pr col-lg-4 col-md-8 col-12" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="product_bl"><img src="{% static 'img/block_three_l.png' %}" alt="">
+                            <div class="product_cont">
+                                <h3>Seo Marketing</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p><span>800<sup><small>$</small></sup><i>/ mo</i></span>
+                                <div class="button"><a href="">Start</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="work">
+        <div class="container">
+            <div class="title_b col-lg-12 col-md-12 p-0">
+                <h2>Latest Work</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="wrk">
+                <div class="img_wr"><img src="{% static 'img/img03_l.jpg' %}" src-plh="https://via.placeholder.com/500x500"></div>
+                <div class="name_wr">
+                    <h3>Best Project</h3><span>Completed In 3D Max</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Iaculis at erat pellentesque adipiscing.
+                        Iaculis at erat pellentesque adipiscing commodo elit at. Et</p>
+                    <div class="icon i_two col-lg-4 col-md-12">
+                        <div class="row align-items-center"><a href=""><i class="fab fa-facebook-f"></i></a><a href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fab fa-youtube"></i></a><a href=""><i class="class fab fa-behance"></i></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="img_w">
+                <div class="row">
+                    <div class="img_portf">
+                        <a data-fancybox="gallery" href="{% static 'img/img10_l.png' %}">
+                            <div class="hover_info"><i class="fas fa-search"></i></div><img src="{% static 'img/img10_l.png' %}"></a>
+                    </div>
+                    <div class="img_portf">
+                        <a data-fancybox="gallery" href="{% static 'img/img06_l.jpg' %}">
+                            <div class="hover_info"><i class="fas fa-search"></i></div><img src="{% static 'img/img06_l.jpg' %}"></a>
+                    </div>
+                    <div class="img_portf">
+                        <a data-fancybox="gallery" href="{% static 'img/img09_l.jpg' %}">
+                            <div class="hover_info"><i class="fas fa-search"></i></div><img src="{% static 'img/img09_l.jpg' %}"></a>
+                    </div>
+                    <div class="img_portf">
+                        <a data-fancybox="gallery" href="{% static 'img/img08_l.jpg' %}">
+                            <div class="hover_info"><i class="fas fa-search"></i></div><img src="{% static 'img/img08_l.jpg' %}"></a>
+                    </div>
+                    <div class="img_portf">
+                        <a data-fancybox="gallery" href="{% static 'img/img05_l.jpg' %}">
+                            <div class="hover_info"><i class="fas fa-search"></i></div><img src="{% static 'img/img05_l.jpg' %}"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="process">
+        <div class="container">
+            <div class="title_b">
+                <h2>Work Process</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="row process_c">
+                <div class="process_b sq_on col-lg-4 col-md-4 col-12"><span class="square_one">1</span>
+                    <div class="b_brc" data-aos="fade-up" data-aos-duration="0">
+                        <h4>Order</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p>
+                    </div>
+                </div>
+                <div class="process_b sq_tw col-lg-4 col-md-4 col-12"><span class="square_two">2</span>
+                    <div class="b_brc" data-aos="fade-up" data-aos-duration="1000">
+                        <h4>Creative Brief</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                    </div>
+                </div>
+                <div class="process_b pr_b sq_th col-lg-4 col-md-4 col-12"><span class="square_three">3</span>
+                    <div class="b_brc" data-aos="fade-up" data-aos-duration="2000">
+                        <h4>Production</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                    </div>
+                </div>
+                <div class="process_b sq_fo col-lg-4 col-md-4 col-12"><span class="square_four">4</span>
+                    <div class="b_brc" data-aos="fade-up" data-aos-duration="0">
+                        <h4>Feedback</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                    </div>
+                </div>
+                <div class="process_b sq_fv col-lg-4 col-md-4 col-12"><span class="square_five">5</span>
+                    <div class="b_brc" data-aos="fade-up" data-aos-duration="1000">
+                        <h4>Delivery</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                    </div>
+                </div>
+                <div class="process_b sq_s col-lg-4 col-md-4 col-12"><span class="square_six">6</span>
+                    <div class="b_brc" data-aos="fade-up" data-aos-duration="2000">
+                        <h4>Happy Client</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="team">
+        <div class="container">
+            <div class="row">
+                <div class="team_t col-lg-3">
+                    <h2>Our Team</h2>
+                </div>
+                <div class="team_t col-lg-9">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                </div>
+            </div>
+            <div class="bg_team col-lg-12">
+                <div class="row justify-content-between">
+                    <div class="face_team col-lg-3 col-md-3 p-0">
+                        <div class="img_team"><img src="{% static 'img/one_team_l.png' %}" alt="">
+                            <div class="social"><a href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fab fa-youtube"></i></a><a href=""><i class="class fab fa-behance"></i></a><a href=""><i class="fab fa-facebook-f"></i></a></div>
+                        </div>
+                        <h4>Emily Lane</h4><span>Director</span>
+                    </div>
+                    <div class="face_team col-lg-3 col-md-3 p-0">
+                        <div class="img_team"><img src="{% static 'img/two_team_l.png' %}" alt="">
+                            <div class="social"><a href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fab fa-youtube"></i></a><a href=""><i class="class fab fa-behance"></i></a><a href=""><i class="fab fa-facebook-f"></i></a></div>
+                        </div>
+                        <h4>Jack Mosley</h4><span>Designer</span>
+                    </div>
+                    <div class="face_team col-lg-3 col-md-3 p-0">
+                        <div class="img_team"><img src="{% static 'img/three_team_l.png' %}" alt="">
+                            <div class="social"><a href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fab fa-youtube"></i></a><a href=""><i class="class fab fa-behance"></i></a><a href=""><i class="fab fa-facebook-f"></i></a></div>
+                        </div>
+                        <h4>Anna Lane</h4><span>3D Designer</span>
+                    </div>
+                    <div class="face_team col-lg-3 col-md-3 p-0">
+                        <div class="img_team"><img src="{% static 'img/four_team_l.png' %}" alt="">
+                            <div class="social"><a href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fab fa-youtube"></i></a><a href=""><i class="class fab fa-behance"></i></a><a href=""><i class="fab fa-facebook-f"></i></a></div>
+                        </div>
+                        <h4>Roy Pitts</h4><span>Menager</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blog">
+        <div class="container">
+            <div class="title_b">
+                <h2>Blog</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="posts_s three_cols col-lg-12">
+                <div class="row">
+                    <div class="posts_standart">
+                        <a href="single_post_image.html">
+                            <div class="post_img"><img src="{% static 'img/blog_one_l.png' %}"></div>
+                        </a>
+                        <div class="wrp_post">
+                            <div class="category"><span>Blog</span><span>Construction</span><span>Painting</span></div>
+                            <a href="single_post_image.html">
+                                <h2>Best office in town</h2>
+                            </a>
+                            <p>Velit indoctum assentior duo at. Ea eos doming inermis apeirian, in mel oratio populo aliquip. Vix ipsum graece corrumpit ne, eum an nonumy aliquip, periculis scribentur disputationi sed ne.</p>
+                            <div class="bottom_inf">
+                                <div class="left_inf"><span>John Doe</span></div>
+                                <div class="right_inf"><span>14.07.2019</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts_standart">
+                        <a href="single_post_image.html">
+                            <div class="post_img"><img src="{% static 'img/blog_two_l.png' %}"></div>
+                        </a>
+                        <div class="wrp_post">
+                            <div class="category"><span>Blog</span><span>Construction</span><span>Painting</span></div>
+                            <a href="single_post_image.html">
+                                <h2>Why design is needed</h2>
+                            </a>
+                            <p>Velit indoctum assentior duo at. Ea eos doming inermis apeirian, in mel oratio populo aliquip. Vix ipsum graece corrumpit ne, eum an nonumy aliquip, periculis scribentur disputationi sed ne.</p>
+                            <div class="bottom_inf">
+                                <div class="left_inf"><span>John Doe</span></div>
+                                <div class="right_inf"><span>14.07.2019</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="posts_standart">
+                        <a href="single_post_image.html">
+                            <div class="post_img"><img src="{% static 'img/blog_three_l.png' %}"></div>
+                        </a>
+                        <div class="wrp_post">
+                            <div class="category"><span>Blog</span><span>Construction</span><span>Painting</span></div>
+                            <a href="single_post_image.html">
+                                <h2>Business Courses</h2>
+                            </a>
+                            <p>Velit indoctum assentior duo at. Ea eos doming inermis apeirian, in mel oratio populo aliquip. Vix ipsum graece corrumpit ne, eum an nonumy aliquip, periculis scribentur disputationi sed ne.</p>
+                            <div class="bottom_inf">
+                                <div class="left_inf"><span>John Doe</span></div>
+                                <div class="right_inf"><span>14.07.2019</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container">
+            <div class="brend">
+                <div class="logo"><img src="{% static 'img/icons/logo_vio.svg' %}">VioStudio</div>
+                <p>Address : 999 White St</p>
+                <p>Phone Number : + (888) 123-4567</p>
+                <p>Email : admin@mail.com</p>
+            </div>
+            <div class="nav_f col-lg-12 col-12"><span>Copyright © 2019 Astroon.</span></div>
+        </div>
+    </footer>
+</body>
+
+</html>
