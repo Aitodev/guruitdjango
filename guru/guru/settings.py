@@ -112,6 +112,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'mainguru/static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mainguru/media')
 
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static/'),
+# )
 EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_HOST_USER = 'no-reply@bindoors.ru'
 EMAIL_HOST_PASSWORD = 'noreply'
