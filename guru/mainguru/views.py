@@ -35,11 +35,11 @@ class ApplicationsView(View):
             mail = form.cleaned_data['mail']
             name = form.cleaned_data['name']
             comment = form.cleaned_data['comment']
-            subject = 'Новая заявка на подписку!'
+            subject = 'Новая заявка!'
             from_email = 'no-reply@bindoors.ru'
             to_email = ['aitofullstackdev@gmail.com', 'aitolivelive@gmail.com']
-            message = 'Новая заявка!' + '\r\n' + '\r\n' + 'Почта: ' + mail + '\r\n' + '\r\n' + 'Имя' + name + '\r\n' + 'Коммент' + comment
+            message = 'Новая заявка!' + '\r\n' + '\r\n' + 'Почта: ' + mail + '\r\n' + '\r\n' + 'Имя: ' + name + '\r\n' + 'Коммент: ' + comment
 
             send_mail(subject, message, from_email, to_email, fail_silently=False)
             bot.send_message(-1001412133345, message)
-        return redirect('home')
+        return redirect('contact')

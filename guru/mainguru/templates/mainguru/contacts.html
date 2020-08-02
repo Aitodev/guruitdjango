@@ -82,14 +82,15 @@
                 <form action="{% url 'applications' %}" method="POST">
                     {% csrf_token %}
                     <div class="rpl_b">
-                       {{ form }}
+                        <input type="text" name="name" placeholder="Имя">
+                        <input type="text" name="mail" placeholder="Почта">
                     </div>
-                    <textarea name="comment" placeholder="Comment"></textarea>
+                    <textarea name="comment" placeholder="Комментарий"></textarea>
                     <p>
                         <input type="checkbox" value="yes">
                         <label>Save my name, email, and website in this browser for the next time I comment.</label>
                     </p>
-                    <div class="button"><a href="">Send Message</a></div>
+                    <input type="submit">
                 </form>
             </div>
         </div>
