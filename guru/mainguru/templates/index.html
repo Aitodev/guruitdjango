@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -18,7 +19,7 @@
             <div class="left_nav">
                 <!-- <span><i class="fas fa-map-marker-alt"></i></span>-->
                 </div> 
-            <div class="right_nav"><span><i class="fas fa-paper-plane"></i>guruitcompany@gmail.com</span><span><i class="fas fa-mobile-alt" type='tel'></i>+996-990-930-555</span></div>
+            <div class="right_nav"><span><i class="fas fa-paper-plane"></i>guruitcompany@gmail.com</span><span><i class="fas fa-mobile-alt" type='tel'></i><a href="tel:+996990930555">+996-990-930-555</a></span></div>
         </div>
     </div>
     <div class="container">
@@ -37,7 +38,11 @@
                     </li>
                     <li><a class="menu__links-item" href="{% url 'about' %}">О нас</a></li>
                     <li><a class="menu__links-item" href="{% url 'contact' %}">Контакты</a></li>
-                    <div class="button small line"><a href="">Связаться с нами</a></div>
+                    <div class="button small line">
+                        <nav id="contact">
+                            <li><a href="#contacts">Связаться с нами</a></li>
+                        </nav>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -58,9 +63,11 @@
                                     <h1>Кретативная студия разработки</h1>
                                 </div>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <div class="button"><a href="">Что мы делаем?
-                                </a></div>
-                            </div>
+                                <div class="button">
+                                    <nav id="menu">
+                                        <li><a href="#products">Что мы делаем?</a></li>
+                                    </nav></div>
+                                </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="tit_img"><img src="{% static 'img/slide02_l.png' %}" src-plh="https://via.placeholder.com/500x500"></div>
@@ -123,7 +130,7 @@
             </div>
         </div>
     </section>
-    <section class="products"><span class="element_ten"><img src="{% static 'img/icons/cub_ten.svg' %}" alt=""></span><span class="element_eleven"><img src="{% static 'img/icons/cub_eleven.svg' %}" alt=""></span><span class="element_twelve"><img src="{% static 'img/icons/cub_twelve.svg' %}" alt=""></span>
+    <section class="products" id="products"><span class="element_ten"><img src="{% static 'img/icons/cub_ten.svg' %}" alt=""></span><span class="element_eleven"><img src="{% static 'img/icons/cub_eleven.svg' %}" alt=""></span><span class="element_twelve"><img src="{% static 'img/icons/cub_twelve.svg' %}" alt=""></span>
         <div class="container">
             <div class="row">
                 <div class="title_b col-sm-12 col-12">
@@ -261,34 +268,18 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
                 </div>
             </div>
+            {% for t in teams %}
             <div class="bg_team col-lg-12">
                 <div class="row justify-content-between">
                     <div class="face_team col-lg-3 col-md-3 p-0">
-                        <div class="img_team"><img src="{% static 'img/one_team_l.png' %}" alt="">
-                            <div class="social"><a href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fab fa-youtube"></i></a><a href=""><i class="class fab fa-behance"></i></a><a href=""><i class="fab fa-facebook-f"></i></a></div>
+                        <div class="img_team"><img src="{{ t.img.url }}" alt="">
+                            <div class="social"><a href="{{ t.phone }}"><i class="fa fa-phone"></i></a><a href="{{ t.instagram }}"><i class="fab fa-instagram"></i></a><a href="{{ t.mail }} "><i class="fa fa-envelope"></i></a></div>
                         </div>
-                        <h4>Emily Lane</h4><span>Director</span>
-                    </div>
-                    <div class="face_team col-lg-3 col-md-3 p-0">
-                        <div class="img_team"><img src="{% static 'img/two_team_l.png' %}" alt="">
-                            <div class="social"><a href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fab fa-youtube"></i></a><a href=""><i class="class fab fa-behance"></i></a><a href=""><i class="fab fa-facebook-f"></i></a></div>
-                        </div>
-                        <h4>Jack Mosley</h4><span>Designer</span>
-                    </div>
-                    <div class="face_team col-lg-3 col-md-3 p-0">
-                        <div class="img_team"><img src="{% static 'img/three_team_l.png' %}" alt="">
-                            <div class="social"><a href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fab fa-youtube"></i></a><a href=""><i class="class fab fa-behance"></i></a><a href=""><i class="fab fa-facebook-f"></i></a></div>
-                        </div>
-                        <h4>Anna Lane</h4><span>3D Designer</span>
-                    </div>
-                    <div class="face_team col-lg-3 col-md-3 p-0">
-                        <div class="img_team"><img src="{% static 'img/four_team_l.png' %}" alt="">
-                            <div class="social"><a href=""><i class="fab fa-twitter"></i></a><a href=""><i class="fab fa-youtube"></i></a><a href=""><i class="class fab fa-behance"></i></a><a href=""><i class="fab fa-facebook-f"></i></a></div>
-                        </div>
-                        <h4>Roy Pitts</h4><span>Menager</span>
+                        <h4>{{ t.name }}</h4><span>{{ t.status }}</span>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </section>
     <section class="blog">
@@ -351,18 +342,59 @@
             </div>
         </div>
     </section>
+    <section class="form_b" id="contacts">
+        <div class="container">
+            <div class="form_contact">
+                <h2>Contact</h2>
+                <p> Your email address will not be published. Required fields are marked *</p>
+                <form action="{% url 'applications' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="rpl_b">
+                        <input type="text" name="name" placeholder="Имя">
+                        <input type="text" name="mail" placeholder="Почта">
+                    </div>
+                    <textarea name="comment" placeholder="Комментарий"></textarea>
+                    <p>
+                        <input type="checkbox" value="yes">
+                        <label>Save my name, email, and website in this browser for the next time I comment.</label>
+                    </p>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </section>
     <footer id="footer">
         <div class="container">
             <div class="brend">
                 <div class="logo"><img src="{% static 'img/icons/logo_vio.svg' %}">GuruIT</div>
-                <p>Address : 999 White St</p>
-                <p>Phone Number : + (888) 123-4567</p>
-                <p>Email : admin@mail.com</p>
+                <p>Номер телефона : <a href="tel:+996990930555">+996990930555</a></p>
+                <p>Номер телефона : <a href="tel:+998933353877">+998933353877</a></p>
+                <p>Почтовый адресс : <a href="mailto:guruitcompany@gmail.com?subject=Хочу%20сайт">guruitcompany@gmail.com</a></p>
             </div>
-            <div class="nav_f col-lg-12 col-12"><span>Copyright © 2019 Astroon.</span></div>
+            <div class="nav_f col-lg-12 col-12"><span>Все права защищены © Copyright © 2020 GuruIT</span></div>
         </div>
     </footer>
 </body>
+    <script type="text/javascript">
+     $(document).ready(function(){
+        $("#menu").on("click","a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1400);
+        });
+    });
+    </script>
+    <script type="text/javascript">
+     $(document).ready(function(){
+        $("#contact").on("click","a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1700);
+        });
+    });
+    </script>
     <script src="{% static 'js/libs.min.js' %}"></script>
     <script src="{% static 'js/index.js' %}"></script>
 </html>
